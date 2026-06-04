@@ -4,12 +4,13 @@ int main()
 {
     int a,b,sum;
 
-    printf("Enter two numbers")
-    scanf("%d %d",&a,b);
+    printf("Enter two numbers");
+    fgets(input, sizeof(input), stdin);
+    sscanf(input, "%d %d", &a, &b);
 
     sum = a + b
 
-    if(sum = 10)
+    if(sum == 10)
     {
         printf("Sum is 10\n");
     }
@@ -20,7 +21,7 @@ int main()
 
     for(i=0;i<5;i++)
     {
-        printf("%d\n",i)
+        printf("%d\n",i);
     }
 
     return
