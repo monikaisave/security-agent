@@ -4,24 +4,33 @@ int main()
 {
     int a,b,sum;
 
-    printf("Enter two numbers")
-    scanf("%d %d",&a,b);
+    printf("Enter two numbers\n");
 
-    sum = a + b
-
-    if(sum = 10)
+    // Use fgets to safely read input
+    if(fgets(buffer, sizeof(buffer), stdin) != NULL)
     {
-        printf("Sum is 10\n");
+        sscanf(buffer, "%d %d", &a, &b);
+
+        sum = a + b;
+
+        if(sum == 10)
+        {
+            printf("Sum is 10\n");
+        }
+        else
+        {
+            printf("Sum is not 10\n");
+        }
+
+        for(i=0;i<5;i++)
+        {
+            printf("%d\n", i);
+        }
     }
     else
     {
-        printf("Sum is not 10\n")
+        printf("Invalid input. Please try again.\n");
     }
 
-    for(i=0;i<5;i++)
-    {
-        printf("%d\n",i)
-    }
-
-    return
+    return 0;
 }
